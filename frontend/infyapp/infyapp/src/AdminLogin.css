@@ -1,0 +1,127 @@
+/* Wrapper - halves layout */
+.admin-login-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Left Half */
+.admin-login-left {
+  flex: 1;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.admin-login-left h1 {
+  font-size: 36px;
+  margin: 15px 0;
+  color: aliceblue;
+}
+
+.admin-login-left p {
+  font-size: 16px;
+  max-width: 350px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.admin-icon {
+  font-size: 150px;
+  margin-bottom: 20px;
+  color: #00eaff;;
+}
+
+/* Right Half */
+.admin-login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c8f6fc, #dddbf9);
+}
+
+/* Card Styling */
+.admin-login-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: left;
+}
+
+/* Override global Form.css only for admin form */
+.admin-login-card form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Input Groups */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+/* .form-group h2 {
+  margin-bottom: 20px;
+  color: #2c5364;
+  justify-content: center;
+} */
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Password toggle */
+.password-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  opacity: 0.9;
+}

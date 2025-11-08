@@ -1,0 +1,217 @@
+.dept-dashboard-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #c8f6fc, #dddbf9);
+  min-height: 100vh;
+}
+
+.dept-dashboard-title {
+  font-weight: 600;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 12px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.dept-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Worker Form */
+.worker-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.worker-form input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+.add-btn {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+.worker-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.worker-card {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #203a43;
+  font-weight: 500;
+}
+
+/* Complaints Table */
+.dept-complaints-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.dept-complaints-table th,
+.dept-complaints-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.update-btn {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.update-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+
+.dept-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup content box */
+.dept-modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 520px;
+  max-height: 85vh; /* prevents overflow */
+  overflow-y: auto; /* enables scrolling inside */
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeSlideIn 0.3s ease;
+}
+
+/* Smooth fade + slide animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dept-modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #203a43;
+}
+
+.dept-modal-content select,
+.dept-modal-content textarea,
+.dept-modal-content input[type="file"] {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.dept-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Save & Close Buttons */
+.save-btn {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+.close-btn {
+  background: #ccc;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Preview image section */
+.preview-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.preview-image img {
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  object-fit: contain;
+}
+/* Delete Worker Icon */
+.delete-worker {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #d9534f;
+  transition: 0.2s ease;
+}
+
+.delete-worker:hover {
+  transform: scale(1.2);
+  color: #ff0000;
+}

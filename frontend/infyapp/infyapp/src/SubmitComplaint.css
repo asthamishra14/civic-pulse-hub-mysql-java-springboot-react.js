@@ -1,0 +1,124 @@
+.submit-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c8f6fc, #dddbf9);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Decorative bubbles */
+.submit-wrapper::before,
+.submit-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.submit-wrapper::before {
+  width: 350px;
+  height: 350px;
+  background: #91dcec;
+  top: -60px;
+  left: -60px;
+}
+
+.submit-wrapper::after {
+  width: 250px;
+  height: 250px;
+  background: #afc9fa;
+  bottom: -40px;
+  right: -40px;
+}
+
+/* Main form box */
+.submit-form {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 25px 35px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px; /* ✅ resized for better fit */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headings and inputs */
+.submit-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3c72;
+  font-size: 1.6rem;
+}
+
+.submit-form label {
+  display: block;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.submit-form input,
+.submit-form select,
+.submit-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.submit-form input:focus,
+.submit-form select:focus,
+.submit-form textarea:focus {
+  border-color: #74ebd5;
+  box-shadow: 0 0 6px rgba(116, 235, 213, 0.6);
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* File preview */
+.file-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.file-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

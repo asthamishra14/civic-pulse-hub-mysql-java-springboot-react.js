@@ -1,0 +1,42 @@
+.track-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 9999;
+}
+.track-modal-content {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow:auto;
+}
+.updates-table {
+  width:100%;
+  border-collapse: collapse;
+}
+.updates-table th, .updates-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.close-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+.track-updates-btn {
+  background: linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

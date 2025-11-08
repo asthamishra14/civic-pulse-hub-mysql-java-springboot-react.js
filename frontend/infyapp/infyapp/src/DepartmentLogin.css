@@ -1,0 +1,144 @@
+.department-login-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+}
+
+/*  Left info section */
+.department-info {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.department-info .dept-icon {
+  font-size: 150px;
+  margin-bottom: 20px;
+  color: #00eaff;
+}
+
+.department-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.department-info p {
+  max-width: 350px;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/*  Right form section */
+.department-login-card {
+  flex: 1;
+  /* background: #fff; */
+  background: linear-gradient(135deg, #c8f6fc, #dddbf9);
+  padding: 40px;
+  border-radius: 0;
+  box-shadow: -6px 0 18px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+  width: 100%;
+}
+
+/*  Heading */
+.department-login-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/*  Form fields */
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 4px rgba(116, 235, 213, 0.5);
+}
+
+/*  Password visibility icon */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #777;
+}
+
+/*  Button */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+  .department-login-container {
+    flex-direction: column;
+  }
+
+  .department-info {
+    flex: none;
+    padding: 30px 20px;
+  }
+
+  .department-login-card {
+    max-width: 100%;
+    box-shadow: none;
+  }
+}

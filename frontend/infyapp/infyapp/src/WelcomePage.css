@@ -1,0 +1,364 @@
+/* Full page center */
+/* .welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* same as app bg */
+/* }  */
+
+/* Central box */
+/* .welcome-box {
+  background: linear-gradient(1135deg, #64c4c2, #8da0f5); /* soft contrast box */
+  /* padding: 100px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+} */ 
+
+/* Heading */
+/* .welcome-box h1 {
+    
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px; */
+  /* color: #1e3c72; deep blue for contrast */
+/* }
+
+.welcome-box p {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+} */
+
+/* Buttons row */
+/* .welcome-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+} */
+
+/* Common button styles */
+/* .btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  color: white;
+} */
+
+/* Buttons with pastel-friendly shades */
+/* .user-register {
+  background: linear-gradient(135deg, #8bdde7, #b5f4b6);
+  color: #2c3e50; 
+} */
+
+/* .admin-register {
+  background: linear-gradient(135deg, #ddfb96, #b6fabf); /* soft blue */
+  /* color: #1e3c72;
+} */ 
+
+/* .user-login {
+  background: linear-gradient(135deg, #b4e9f0, #d3ffd4); /* soft green */
+  /* color: #2c3e50;
+} */ 
+
+/* .admin-login {
+  background: linear-gradient(135deg,  #b4e9f0, #d3ffd4); /* pastel pink-purple */
+  /* color: #2c3e50;
+} */ 
+
+/* Hover effect */
+/* .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+} */
+
+/* @keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+} */
+
+/* Smooth fade-in */
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap");
+
+.welcome-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Left half - Animated Gradient Background */
+.welcome-left {
+  flex: 1.1;
+ background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); 
+  background-size: 400% 400%;
+  animation: gradientFlow 10s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient shimmer */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating glow orbs (subtle) */
+.welcome-left::before,
+.welcome-left::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: floatOrbs 8s ease-in-out infinite;
+}
+.welcome-left::before {
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.welcome-left::after {
+  width: 300px;
+  height: 300px;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes floatOrbs {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/* Text animation */
+.overlay-text {
+  animation: fadeSlideIn 1.5s ease-out forwards;
+  max-width: 600px;
+  opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.overlay-text h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Gentle text glow animation */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Right half */
+.welcome-right {
+  flex: 0.9;
+   background: linear-gradient(135deg, #c0f8ff, #cfd9ff); 
+  /* background: linear-gradient(90deg, #74ebd5, #acb6e5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInRight 1.5s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card on right */
+.welcome-box {
+  background: white;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.welcome-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.welcome-box p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Buttons */
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.register {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+.user-login {
+  background: linear-gradient(135deg, #00ff94, #00b09b); 
+  color: white;
+}
+
+.admin-login {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: white;
+}
+
+.department-login {
+  background: linear-gradient(135deg, #2d1e55, #161033);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+
+  .welcome-left,
+  .welcome-right {
+    flex: none;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .overlay-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .overlay-text h2 {
+    font-size: 1rem;
+  }
+
+  .welcome-box {
+    width: 90%;
+  }
+}

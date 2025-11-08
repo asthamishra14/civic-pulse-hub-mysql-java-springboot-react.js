@@ -1,0 +1,15 @@
+# Node.js (React frontend)
+frontend/infyapp/node_modules/
+frontend/infyapp/build/
+
+# Java (Spring Boot backend)
+backend/login-register-server/target/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
