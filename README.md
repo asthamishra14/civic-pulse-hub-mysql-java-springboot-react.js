@@ -18,9 +18,7 @@ It enables citizens to register complaints, track their resolution, and provide 
 | **Backend** | Spring Boot (Java), RESTful APIs |
 | **Database** | MySQL |
 | **Libraries & Tools** | Axios, React Router DOM, Recharts |
-| **Deployment & Security** | JWT Authentication, CORS, Localhost Testing |
-
----
+| **Deployment & Security** | spring Security (Basic Role Validation), CORS Configuration, Localhost Testing
 
 ## 💡 Key Features  
 
